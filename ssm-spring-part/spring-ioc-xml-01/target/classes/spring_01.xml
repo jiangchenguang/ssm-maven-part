@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    无参构造函数实例化组件 -->
+    <bean id="happyComponent" class="com.atguigu.ioc_01.HappyComponent" />
+
+    <bean id="happyComponent2" class="com.atguigu.ioc_01.HappyComponent" />
+
+
+    <bean id="clientService" class="com.atguigu.ioc_01.ClientService" factory-method="createInstance" />
+</beans>
