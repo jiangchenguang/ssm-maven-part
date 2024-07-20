@@ -1,8 +1,10 @@
+import controller.StudentController;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import pojo.Student;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -35,8 +37,13 @@ public class JdbcTemplateTest {
             }
         }, 1);
         System.out.println(stu1);
+    }
 
-
-
+    @Test
+    public void testQueryAll() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring_02.xml");
+        StudentController controller = context.getBean(StudentController.class);
+        controller.findAll();
+        context.close();
     }
 }

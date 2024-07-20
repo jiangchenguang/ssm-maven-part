@@ -1,3 +1,5 @@
+package pojo;
+
 public class Student {
     Integer id;
 
@@ -49,7 +51,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "pojo.Student{" +
                 "id=" + id +
                 ", age=" + age +
                 ", name='" + name + '\'' +
