@@ -34,4 +34,12 @@ public class SpringIocTest {
         UserService service = context.getBean(UserService.class);
         service.show();
     }
+
+    @Test
+    public void testIoc_04() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-04.xml");
+        com.atguigu.ioc_04.JavaBean javaBean = context.getBean(com.atguigu.ioc_04.JavaBean.class);
+        System.out.println(javaBean);
+        context.close();
+    }
 }
