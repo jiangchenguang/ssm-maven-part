@@ -1,4 +1,5 @@
 import com.atguigu.config.JavaConfiguration;
+import com.atguigu.config.JavaConfigurationA;
 import com.atguigu.ioc_01.StudentController;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -11,5 +12,10 @@ public class TestAnnotation {
 
         StudentController controller = context.getBean(StudentController.class);
         controller.queryAll();
+    }
+
+    @Test
+    public void test01() {
+        ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfigurationA.class);
     }
 }
