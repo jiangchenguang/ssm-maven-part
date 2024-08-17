@@ -14,7 +14,7 @@ public class SpringAopTest {
         ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
 
         Calculator calculator = context.getBean(Calculator.class);
-        int value = calculator.div(1, 0);
+        int value = calculator.div(1, 1);
         System.out.println(value);
         System.out.println(calculator);
     }

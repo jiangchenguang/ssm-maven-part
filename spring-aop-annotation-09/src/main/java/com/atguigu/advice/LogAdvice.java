@@ -11,17 +11,17 @@ import org.springframework.stereotype.Component;
 public class LogAdvice {
 
 
-    @Before("execution(* com.atguigu.service.impl.*.*(..))")
+    @Before("com.atguigu.pointcut.MyPointCut.pc()")
     public void start(){
         System.out.println("方法开始了");
     }
 
-    @After("execution(* com.atguigu.service.impl.*.*(..))")
+    @After("com.atguigu.pointcut.MyPointCut.pc()")
     public void after(){
         System.out.println("方法结束了");
     }
 
-    @AfterThrowing("execution(* com.atguigu.service.impl.*.*(..))")
+    @AfterThrowing("com.atguigu.pointcut.MyPointCut.pc()")
     public void error(){
         System.out.println("方法报错了");
     }
